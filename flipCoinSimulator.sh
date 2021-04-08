@@ -40,3 +40,23 @@ then
 else
 	echo "its a tie"
 fi
+
+if [ $count -eq $count1 ]
+then
+   while [ $valid ]
+   randomCheck=$(( RANDOM%2 ))
+   do
+      if [ $randomCheck -eq 1 ]
+      then
+         count=$(( $count+1 ))
+      else
+         count1=$(( $count1+1 ))
+      fi
+      num=$(( $count-$count1 ))
+      num1=$(( $count1-$count ))
+      if [[ $num -eq 2 || $num1 -eq 2 ]]
+      then
+         break
+      fi
+   done
+fi
